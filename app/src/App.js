@@ -1,22 +1,20 @@
-import UserPanelContainer from "./components/UserPanel/UserPanelContainer";
 import React from "react";
 import { ThemeProvider } from "./context/ThemeContext";
 import { LanguageProvider } from "./context/LanguageContext";
 import { LikesProvider } from "./context/LikesContext";
+import UserPanelContainer from "./components/UserPanel/UserPanelContainer";
 import "./index.css";
 
-function App() {
+const App = () => {
   return (
     <ThemeProvider>
       <LanguageProvider>
         <LikesProvider>
-          <div className="layout">
-            <UserPanelContainer />
-          </div>
+          <UserPanelContainer />
         </LikesProvider>
       </LanguageProvider>
     </ThemeProvider>
   );
-}
+};
 
 export default App;

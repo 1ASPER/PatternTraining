@@ -1,0 +1,23 @@
+.user-panel {
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 50%;
+    margin-left: 24%;
+    margin-top: 10vh;
+    background-color: white;
+    text-align: center;
+  }
+  
+.user-panel.dark {
+  background-color: #333;
+  color: white;
+}
+  
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+  

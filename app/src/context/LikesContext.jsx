@@ -1,20 +1,16 @@
-import React, { createContext, useState } from "react";
+import { createContext, useState, useContext } from "react";
 
-export const LikesContext = createContext();
+const LikesContext = createContext();
+export const useLikes = () => useContext(LikesContext);
+
 
 export const LikesProvider = ({ children }) => {
   const [likes, setLikes] = useState(0);
-  const [isLiked, setIsLiked] = useState(false);
+  const addLike = () => setLikes(likes + 1);
 
-  const toggleLike = () => {
-    if (!isLiked) {
-      setIsLiked(true);
-    }
-    setLikes(likes + 1);
-  };
 
   return (
-    <LikesContext.Provider value={{ likes, isLiked, toggleLike }}>
+    <LikesContext.Provider value={{ likes, addLike }}>
       {children}
     </LikesContext.Provider>
   );
